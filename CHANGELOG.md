@@ -1,43 +1,47 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+Все изменения будут здеся.
 
-## [Unreleased]
+Файл несет больше формальную информацию, нежели сами изменения.
+Для просмотра изменений читайте документацию.
 
-### Planned
-- Track lyrics retrieval
-- POST requests support
-- Playlist creation, modification, and track management
-- Custom track uploads to Yandex Music servers
-- Detailed error handling with specific exception types
-- Improved lower-level implementation
-- Structured return format instead of raw server responses
+### Планы
+- Получение треков в разном качестве (lossless, aac64 итд)
+- Загрузка локальных треков в яндекс музыку
+
+## [1.0.1] - 2025-08-27
+### Изменено
+- Изменен readme
+
+## [1.0.0] - 2025-08-27
+### Добавлено
+- Изменение плейлистов
+- Пометка понравившихся треков
+- Работа с альбомами
+- Поиск
+- Получение лендинга
+
+### Изменено
+- Работа со скачиванием треков
+- Название некоторых методов
+- Улучшенная работа с исключениями
 
 ## [0.0.3] - 2025-08-15
 
-### Added
-- Example implementation in `example.dart`
-- Improved code documentation and comments
-
-### Changed
-- Enhanced API documentation
-- Better code examples in comments
+### Изменено
+- Добавлен example `example.dart`
+- Улучшено описание функций
 
 ## [0.0.2] - 2025-08-15
 
-### Removed
+### Удалено
 - Automatic track downloading functionality (WASM compatibility)
-
-### Changed
-- Improved web compatibility by removing file operations
 
 ## [0.0.1] - 2025-08-15
 
-### Added
-- Initial release with core functionality
-- Account management (user info, subscription status)
-- Playlist operations (get playlists, playlist details, cover art)
-- Track management (liked/disliked tracks, track info)
-- Search functionality (tracks, albums, artists, podcasts)
-- Basic error handling
-- Asynchronous API support
+### Добавлено
+- Первый релиз с основным функционалом
+- Получение информации об аккаунте
+- Получение информации о плейлистах
+- Работа с треками
+- Базовые исключения
