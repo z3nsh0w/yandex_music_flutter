@@ -1,3 +1,5 @@
+import 'package:yandex_music/src/objects/devired_colors.dart';
+
 class Cover {
   final String? type;
   final List<String>? itemsUri;
@@ -26,4 +28,12 @@ class Cover {
       prefix: json['prefix'] as String?,
     );
   }
+}
+
+class Cover2 {
+  final String uri;
+  final String color;
+  final DerivedColors derivedColors;
+
+  Cover2(Map<String, dynamic> fromJson) : uri = fromJson['uri'], color = fromJson['color'], derivedColors = DerivedColors(fromJson['derivedColors']);
 }

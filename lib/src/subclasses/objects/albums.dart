@@ -2,10 +2,9 @@ import 'package:yandex_music/src/lower_level.dart';
 import 'package:yandex_music/yandex_music.dart';
 
 class YandexMusicAlbums {
-  final YandexMusic _parentClass;
   final YandexMusicApiAsync api;
 
-  YandexMusicAlbums(this._parentClass, this.api);
+  YandexMusicAlbums(this.api);
 
   /// Returns information about the album
   Future<Album> getInformation(int albumId, {CancelToken? cancelToken}) async {

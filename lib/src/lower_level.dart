@@ -1,5 +1,5 @@
-import 'dart:io';
 import 'dart:convert';
+import 'dart:typed_data';
 import 'package:dio/dio.dart';
 import 'package:yandex_music/src/objects/search_result.dart';
 import './requests/requests.dart';
@@ -642,13 +642,15 @@ class YandexMusicApiAsync {
 
   Future<Response> uploadFile(
     String url,
-    File file, {
+    Uint8List fileBytes,
+    String fileName,
+    {
     CancelToken? cancelToken,
   }) async {
     final formData = FormData.fromMap({
-      'file': await MultipartFile.fromFile(
-        file.path,
-        filename: file.path.split('/').last,
+      'file': await MultipartFile.fromBytes(
+        fileBytes,
+        filename: fileName,
       ),
     });
 
@@ -735,6 +737,10 @@ class YandexMusicApiAsync {
       'withLikesCount' : withLikesCount,
       'withBestResults' : withBestResults,
     }, cancelToken: cancelToken);
+  }
+
+  Future<dynamic> getArtistInfo(String route, {CancelToken? cancelToken, int page = 0}) async {
+    return await requests.customGet(route, {'page': page}, cancelToken: cancelToken);
   }
 
   Future<dynamic> _feedbacker(

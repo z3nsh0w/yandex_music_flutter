@@ -89,6 +89,7 @@ class YandexMusic {
   late sub_classes.YandexMusicMyVibe myVibe;
   late sub_classes.YandexMusicSearch search;
   late sub_classes.YandexMusicAlbums albums;
+  late sub_classes.YandexMusicArtists artists;
   late sub_classes.YandexMusicLanding landing;
   late sub_classes.YandexMusicAccount account;
   late sub_classes.YandexMusicPlaylists playlists;
@@ -106,12 +107,13 @@ class YandexMusic {
       );
     }
 
-    pin = sub_classes.YandexMusicPin(this, _api);
+    pin = sub_classes.YandexMusicPin(_api);
+    artists = sub_classes.YandexMusicArtists(_api);
+    search = sub_classes.YandexMusicSearch(_api);
+    myVibe = sub_classes.YandexMusicMyVibe(_api);
+    albums = sub_classes.YandexMusicAlbums(_api);
+    landing = sub_classes.YandexMusicLanding(_api);
     tracks = sub_classes.YandexMusicTrack(this, _api);
-    search = sub_classes.YandexMusicSearch(this, _api);
-    myVibe = sub_classes.YandexMusicMyVibe(this, _api);
-    albums = sub_classes.YandexMusicAlbums(this, _api);
-    landing = sub_classes.YandexMusicLanding(this, _api);
     account = sub_classes.YandexMusicAccount(this, _api);
     playlists = sub_classes.YandexMusicPlaylists(this, _api);
     usertracks = sub_classes.YandexMusicUserTracks(this, _api);
