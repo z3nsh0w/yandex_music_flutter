@@ -1,7 +1,3 @@
-❗ **WARNING: This repository is currently inactive.**
-
-❗ If you really need this library, you can export the latest version from the [quark](https://github.com/z3nsh0w/quark) repository (lib/yandex_music).
-
 ![logo](https://github.com/z3nsh0w/yandex_music_flutter/blob/main/logo.png?raw=true)
 <h1 align='center'>Simple, Robust & Full-Featured Yandex Music Library<br>created for Dart &  Flutter</h1>
 
